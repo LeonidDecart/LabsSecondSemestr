@@ -1,0 +1,572 @@
+{
+  "Booklots": [
+    {
+      "Id": 1,
+      "shelfNumber": 1,
+      "placeNumber": 1
+    },
+    {
+      "Id": 2,
+      "shelfNumber": 1,
+      "placeNumber": 2
+    },
+    {
+      "Id": 3,
+      "shelfNumber": 1,
+      "placeNumber": 3
+    },
+    {
+      "Id": 4,
+      "shelfNumber": 1,
+      "placeNumber": 4
+    },
+    {
+      "Id": 5,
+      "shelfNumber": 1,
+      "placeNumber": 5
+    },
+    {
+      "Id": 6,
+      "shelfNumber": 1,
+      "placeNumber": 6
+    },
+    {
+      "Id": 7,
+      "shelfNumber": 2,
+      "placeNumber": 1
+    },
+    {
+      "Id": 8,
+      "shelfNumber": 2,
+      "placeNumber": 2
+    },
+    {
+      "Id": 9,
+      "shelfNumber": 2,
+      "placeNumber": 3
+    },
+    {
+      "Id": 10,
+      "shelfNumber": 2,
+      "placeNumber": 4
+    },
+    {
+      "Id": 11,
+      "shelfNumber": 2,
+      "placeNumber": 5
+    },
+    {
+      "Id": 12,
+      "shelfNumber": 2,
+      "placeNumber": 6
+    },
+    {
+      "Id": 13,
+      "shelfNumber": 3,
+      "placeNumber": 1
+    },
+    {
+      "Id": 14,
+      "shelfNumber": 3,
+      "placeNumber": 2
+    },
+    {
+      "Id": 15,
+      "shelfNumber": 3,
+      "placeNumber": 3
+    },
+    {
+      "Id": 16,
+      "shelfNumber": 3,
+      "placeNumber": 4
+    },
+    {
+      "Id": 17,
+      "shelfNumber": 3,
+      "placeNumber": 5
+    },
+    {
+      "Id": 18,
+      "shelfNumber": 3,
+      "placeNumber": 6
+    },
+    {
+      "Id": 19,
+      "shelfNumber": 4,
+      "placeNumber": 1
+    },
+    {
+      "Id": 20,
+      "shelfNumber": 4,
+      "placeNumber": 2
+    },
+    {
+      "Id": 21,
+      "shelfNumber": 4,
+      "placeNumber": 3
+    },
+    {
+      "Id": 22,
+      "shelfNumber": 4,
+      "placeNumber": 4
+    },
+    {
+      "Id": 23,
+      "shelfNumber": 4,
+      "placeNumber": 5
+    },
+    {
+      "Id": 24,
+      "shelfNumber": 4,
+      "placeNumber": 6
+    },
+    {
+      "Id": 25,
+      "shelfNumber": 5,
+      "placeNumber": 1
+    },
+    {
+      "Id": 26,
+      "shelfNumber": 5,
+      "placeNumber": 2
+    },
+    {
+      "Id": 27,
+      "shelfNumber": 5,
+      "placeNumber": 3
+    },
+    {
+      "Id": 28,
+      "shelfNumber": 5,
+      "placeNumber": 4
+    },
+    {
+      "Id": 29,
+      "shelfNumber": 5,
+      "placeNumber": 5
+    },
+    {
+      "Id": 30,
+      "shelfNumber": 5,
+      "placeNumber": 6
+    }
+  ],
+  "Authors": [
+    {
+      "Id": 1,
+      "Name": "Агата Кристи"
+    },
+    {
+      "Id": 2,
+      "Name": "Уильям Шекспир"
+    },
+    {
+      "Id": 3,
+      "Name": "Федор Достоевский"
+    },
+    {
+      "Id": 4,
+      "Name": "Лев Толстой"
+    },
+    {
+      "Id": 5,
+      "Name": "Эрнест Хемингуэй"
+    },
+    {
+      "Id": 6,
+      "Name": "Джейн Остин"
+    },
+    {
+      "Id": 7,
+      "Name": "Джордж Оруэлл"
+    },
+    {
+      "Id": 8,
+      "Name": "Марк Твен"
+    },
+    {
+      "Id": 9,
+      "Name": "Александр Пушкин"
+    },
+    {
+      "Id": 10,
+      "Name": "Фрэнсис Скотт Фицджеральд"
+    },
+    {
+      "Id": 11,
+      "Name": "Джордж Р. Р. Мартин"
+    },
+    {
+      "Id": 12,
+      "Name": "Жюль Верн"
+    },
+    {
+      "Id": 13,
+      "Name": "Дж. К. Роулинг"
+    },
+    {
+      "Id": 14,
+      "Name": "Оскар Уайльд"
+    },
+    {
+      "Id": 15,
+      "Name": "Антуан де Сент-Экзюпери"
+    },
+    {
+      "Id": 16,
+      "Name": "Чарльз Диккенс"
+    },
+    {
+      "Id": 17,
+      "Name": "Рэй Брэдбери"
+    },
+    {
+      "Id": 18,
+      "Name": "Джон Стейнбек"
+    },
+    {
+      "Id": 19,
+      "Name": "Габриэль Гарсиа Маркес"
+    },
+    {
+      "Id": 20,
+      "Name": "Дж. Д. Сэлинджер"
+    },
+    {
+      "Id": 21,
+      "Name": "Михаил Булгаков"
+    },
+    {
+      "Id": 22,
+      "Name": "Харпер Ли"
+    },
+    {
+      "Id": 23,
+      "Name": "Андрей Сапковский"
+    },
+    {
+      "Id": 24,
+      "Name": "Антон Чехов"
+    },
+    {
+      "Id": 25,
+      "Name": "Виктор Гюго"
+    },
+    {
+      "Id": 26,
+      "Name": "Джеймс Джойс"
+    },
+    {
+      "Id": 27,
+      "Name": "Михаил Шолохов"
+    },
+    {
+      "Id": 28,
+      "Name": "Умберто Эко"
+    },
+    {
+      "Id": 29,
+      "Name": "Херман Мелвилл"
+    },
+    {
+      "Id": 30,
+      "Name": "Тони Моррисон"
+    }
+  ],
+  "Books": [
+    {
+      "Id": 1,
+      "Name": "Убийство в Восточном экспрессе",
+      "PublicationDate": 1934,
+      "LotId": 1,
+      "DeveloperId": 1
+    },
+    {
+      "Id": 2,
+      "Name": "Гамлет",
+      "PublicationDate": 1603,
+      "LotId": 2,
+      "DeveloperId": 2
+    },
+    {
+      "Id": 3,
+      "Name": "Преступление и наказание",
+      "PublicationDate": 1866,
+      "LotId": 3,
+      "DeveloperId": 3
+    },
+    {
+      "Id": 4,
+      "Name": "Война и мир",
+      "PublicationDate": 1869,
+      "LotId": 4,
+      "DeveloperId": 4
+    },
+    {
+      "Id": 5,
+      "Name": "Старик и море",
+      "PublicationDate": 1952,
+      "LotId": 5,
+      "DeveloperId": 5
+    },
+    {
+      "Id": 6,
+      "Name": "Гордость и предубеждение",
+      "PublicationDate": 1813,
+      "LotId": 6,
+      "DeveloperId": 6
+    },
+    {
+      "Id": 7,
+      "Name": "1984",
+      "PublicationDate": 1949,
+      "LotId": 7,
+      "DeveloperId": 7
+    },
+    {
+      "Id": 8,
+      "Name": "Приключения Тома Сойера",
+      "PublicationDate": 1876,
+      "LotId": 8,
+      "DeveloperId": 8
+    },
+    {
+      "Id": 9,
+      "Name": "Евгений Онегин",
+      "PublicationDate": 1833,
+      "LotId": 9,
+      "DeveloperId": 9
+    },
+    {
+      "Id": 10,
+      "Name": "Великий Гэтсби",
+      "PublicationDate": 1925,
+      "LotId": 10,
+      "DeveloperId": 10
+    },
+    {
+      "Id": 11,
+      "Name": "Игра престолов",
+      "PublicationDate": 1996,
+      "LotId": 11,
+      "DeveloperId": 11
+    },
+    {
+      "Id": 12,
+      "Name": "Двадцать тысяч лье под водой",
+      "PublicationDate": 1870,
+      "LotId": 12,
+      "DeveloperId": 12
+    },
+    {
+      "Id": 13,
+      "Name": "Гарри Поттер и философский камень",
+      "PublicationDate": 1997,
+      "LotId": 13,
+      "DeveloperId": 13
+    },
+    {
+      "Id": 14,
+      "Name": "Портрет Дориана Грея",
+      "PublicationDate": 1890,
+      "LotId": 14,
+      "DeveloperId": 14
+    },
+    {
+      "Id": 15,
+      "Name": "Маленький принц",
+      "PublicationDate": 1943,
+      "LotId": 15,
+      "DeveloperId": 15
+    },
+    {
+      "Id": 16,
+      "Name": "Оливер Твист",
+      "PublicationDate": 1838,
+      "LotId": 16,
+      "DeveloperId": 16
+    },
+    {
+      "Id": 17,
+      "Name": "451 градус по Фаренгейту",
+      "PublicationDate": 1953,
+      "LotId": 17,
+      "DeveloperId": 17
+    },
+    {
+      "Id": 18,
+      "Name": "Гроздья гнева",
+      "PublicationDate": 1939,
+      "LotId": 18,
+      "DeveloperId": 18
+    },
+    {
+      "Id": 19,
+      "Name": "Сто лет одиночества",
+      "PublicationDate": 1967,
+      "LotId": 19,
+      "DeveloperId": 19
+    },
+    {
+      "Id": 20,
+      "Name": "Над пропастью во ржи",
+      "PublicationDate": 1951,
+      "LotId": 20,
+      "DeveloperId": 20
+    },
+    {
+      "Id": 21,
+      "Name": "Мастер и Маргарита",
+      "PublicationDate": 1967,
+      "LotId": 21,
+      "DeveloperId": 21
+    },
+    {
+      "Id": 22,
+      "Name": "Убить пересмешника",
+      "PublicationDate": 1960,
+      "LotId": 22,
+      "DeveloperId": 22
+    },
+    {
+      "Id": 23,
+      "Name": "Ведьмак",
+      "PublicationDate": 1990,
+      "LotId": 23,
+      "DeveloperId": 23
+    },
+    {
+      "Id": 24,
+      "Name": "Три сестры",
+      "PublicationDate": 1901,
+      "LotId": 24,
+      "DeveloperId": 24
+    },
+    {
+      "Id": 25,
+      "Name": "Отверженные",
+      "PublicationDate": 1862,
+      "LotId": 25,
+      "DeveloperId": 25
+    },
+    {
+      "Id": 26,
+      "Name": "Улисс",
+      "PublicationDate": 1922,
+      "LotId": 26,
+      "DeveloperId": 26
+    },
+    {
+      "Id": 27,
+      "Name": "Тихий Дон",
+      "PublicationDate": 1928,
+      "LotId": 27,
+      "DeveloperId": 27
+    },
+    {
+      "Id": 28,
+      "Name": "Имя розы",
+      "PublicationDate": 1980,
+      "LotId": 28,
+      "DeveloperId": 28
+    },
+    {
+      "Id": 29,
+      "Name": "Моби Дик",
+      "PublicationDate": 1851,
+      "LotId": 29,
+      "DeveloperId": 29
+    },
+    {
+      "Id": 30,
+      "Name": "Влюбленные",
+      "PublicationDate": 2003,
+      "LotId": 30,
+      "DeveloperId": 30
+    }
+  ],
+  "ReaderTickets": [
+    {
+      "Id": 1
+    },
+    {
+      "Id": 2
+    },
+    {
+      "Id": 3
+    },
+    {
+      "Id": 4
+    },
+    {
+      "Id": 5
+    }
+  ],
+  "Readers": [
+    {
+      "Id": 1,
+      "Name": {
+        "FirstName": "Иван",
+        "LastName": "Петров",
+        "MiddleName": "Сергеевич"
+      },
+      "TicketId": 1
+    },
+    {
+      "Id": 2,
+      "Name": {
+        "FirstName": "Анна",
+        "LastName": "Иванова",
+        "MiddleName": "Александровна"
+      },
+      "TicketId": 2
+    },
+    {
+      "Id": 3,
+      "Name": {
+        "FirstName": "Максим",
+        "LastName": "Сидоров",
+        "MiddleName": "Игоревич"
+      },
+      "TicketId": 3
+    },
+    {
+      "Id": 4,
+      "Name": {
+        "FirstName": "Екатерина",
+        "LastName": "Смирнова",
+        "MiddleName": "Андреевна"
+      },
+      "TicketId": 4
+    },
+    {
+      "Id": 5,
+      "Name": {
+        "FirstName": "Алексей",
+        "LastName": "Кузнецов",
+        "MiddleName": "Дмитриевич"
+      },
+      "TicketId": 5
+    }
+  ],
+  "BookLogs": [
+    {
+      "ReaderId": 1,
+      "BookId": 5,
+      "TakenDate": "2023-01-01T13:30:00",
+      "ReturnedDate": "2023-01-14T15:30:00
+    },
+    {
+      "ReaderId": 4,
+      "BookId": 1,
+      "TakenDate": "2023-02-15T18:30:00",
+      "ReturnedDate": "2023-02-18T14:30:00
+    },
+    {
+      "ReaderId": 2,
+      "BookId": 28,
+      "TakenDate": "2023-04-01T12:30:00",
+      "ReturnedDate": null
+    }
+  ]
+}

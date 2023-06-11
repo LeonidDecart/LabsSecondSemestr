@@ -5,6 +5,12 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labs", "Labs\Labs.csproj", "{945A1E95-CCC9-4F4A-ADCD-7D4D60EE6FF1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{0073E8D0-43A6-4CA2-9CED-2050960B152A}"
+	ProjectSection(SolutionItems) = preProject
+		BookLogs.csv = BookLogs.csv
+		database.json = database.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
