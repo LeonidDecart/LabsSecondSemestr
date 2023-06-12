@@ -7,6 +7,6 @@
         public Reader Reader { get; set; }
         public Book Book { get; set; }
         public DateTime TakeDate { get; set; }
-        public DateTime ReturnDate { get; set; }
+        public DateTime? ReturnDate { get; set; }
     }
 }

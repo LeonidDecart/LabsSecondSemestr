@@ -8,6 +8,29 @@ class Program
     {
         Database = new Database();
         InitializeDatabase();
+        PrintBooksInformation();
+    }
+
+    public static void PrintBooksInformation()
+    {
+        Console.WriteLine("{0,-25} {1,-40} {2,-30} {3,-20}","Автор","Название","Читает","Взял");
+        for (int i = 0; i < Database.Books.Count; i++)
+        {
+            PrintBookInformation(Database.Books[i]);   
+        }
+    }
+
+    public static void PrintBookInformation(Book book)
+    {
+        foreach (Log log in Database.Logs)
+        {
+            if (log.Book == book && log.ReturnDate == null)
+            {
+                Console.WriteLine("{0,-25} {1,-40} {2,-30} {3,-20}", book.Author, book.Name, log.Reader.Name, log.TakeDate);
+                return;
+            }
+        }
+        Console.WriteLine("{0,-25} {1,-40}", book.Author, book.Name);
     }
 
     public static void InitializeDatabase()
@@ -84,18 +107,21 @@ class Program
                 throw new Exception("File Logs.csv | Invalid bookId format | Line - " + (i + 1).ToString());
             if (!DateTime.TryParse(logStringSplitted[3], out DateTime logTakeDate))
                 throw new Exception("File Logs.csv | Invalid logTakeDate format | Line - " + (i + 1).ToString());
-            if (!DateTime.TryParse(logStringSplitted[4], out DateTime logReturnDate))
+            if (!DateTime.TryParse(logStringSplitted[4], out DateTime logReturnDate) && logStringSplitted[4] != "Not defined")
                 throw new Exception("File Logs.csv | Invalid logReturnDate format | Line - " + (i + 1).ToString());
 
-            Database.Logs.Add(new Log()
+            Log log = new Log
             {
                 Id = logId,
-                Reader = Database.Readers.Find(reader => reader.Id == readerId) ?? throw new Exception("File Logs.csv | readerId is not Exist | Line - " + (i + 1).ToString()),
-                Book = Database.Books.Find(book => book.Id == bookId) ?? throw new Exception("File Logs.csv | bookId is not Exist | Line - " + (i + 1).ToString()),
+                Reader = Database.Readers.FirstOrDefault(reader => reader.Id == readerId)
+                    ?? throw new Exception("File Logs.csv | readerId does not exist | Line - " + (i + 1).ToString()),
+                Book = Database.Books.FirstOrDefault(book => book.Id == bookId)
+                        ?? throw new Exception("File Logs.csv | bookId does not exist | Line - " + (i + 1).ToString()),
                 TakeDate = logTakeDate,
-                ReturnDate = logReturnDate
-            }
-            );
+                ReturnDate = logStringSplitted[4] != "Not defined" ? logReturnDate : (DateTime?)null
+            };
+
+            Database.Logs.Add(log);
         }
     }
 }
