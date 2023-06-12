@@ -3,12 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labs", "Labs\Labs.csproj", "{945A1E95-CCC9-4F4A-ADCD-7D4D60EE6FF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Labs", "Labs\Labs.csproj", "{945A1E95-CCC9-4F4A-ADCD-7D4D60EE6FF1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{0073E8D0-43A6-4CA2-9CED-2050960B152A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scheme", "Scheme", "{17E5F25D-D74B-4D48-AEB6-DB54DDE805B8}"
 	ProjectSection(SolutionItems) = preProject
-		BookLogs.csv = BookLogs.csv
-		database.json = database.json
+		Scheme\Book.json = Scheme\Book.json
+		Scheme\Log.json = Scheme\Log.json
+		Scheme\Reader.json = Scheme\Reader.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{5923A24E-D981-4835-B083-6037DC5F38FD}"
+	ProjectSection(SolutionItems) = preProject
+		Data\Books.csv = Data\Books.csv
+		Data\Logs.csv = Data\Logs.csv
+		Data\Readers.csv = Data\Readers.csv
 	EndProjectSection
 EndProject
 Global
@@ -24,6 +34,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{17E5F25D-D74B-4D48-AEB6-DB54DDE805B8} = {0073E8D0-43A6-4CA2-9CED-2050960B152A}
+		{5923A24E-D981-4835-B083-6037DC5F38FD} = {0073E8D0-43A6-4CA2-9CED-2050960B152A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5078259C-EE3A-4030-9CF9-8D7515C4888F}

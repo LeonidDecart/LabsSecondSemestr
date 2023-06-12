@@ -1,0 +1,7 @@
+{
+  "Id": "uint",
+  "Reader": "Reader",
+  "Book": "Book",
+  "TakeDate": "DateTime",
+  "ReturnDate": "DateTime"
+}

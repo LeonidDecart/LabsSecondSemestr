@@ -1,25 +1,11 @@
-﻿using book;
-using reader;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace log
+﻿namespace LabAllowance
 {
-    class BookLog
+    public class Log
     {
-        public Reader User { get; }
-        public Book Book { get; }
-        public DateTime TakenDate { get; }
-        public DateTime? ReturnedDate { get; }
-        public BookLog(Reader user, Book book, DateTime takenDate, DateTime? returnedDate)
-        {
-            User = user;
-            Book = book;
-            TakenDate = takenDate;
-            ReturnedDate = returnedDate;
-        }
+        public uint Id { get; set; }
+        public Reader Reader { get; set; }
+        public Book Book { get; set; }
+        public DateTime TakeDate { get; set; }
+        public DateTime ReturnDate { get; set; }
     }
 }

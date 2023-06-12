@@ -1,20 +1,18 @@
-﻿using author;
-using book;
-using reader;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using static System.Reflection.Metadata.BlobBuilder;
 
-namespace database
+namespace LabAllowance
 {
     class Database
     {
-        public List<BookLot> BookLots { get; }
-        public List<Author> Authors { get; }
         public List<Book> Books { get; }
-        public List<ReaderTicket> ReaderTickets { get; }
         public List<Reader> Readers { get; }
+        public List<Log> Logs { get; }
+        public Database()
+        {
+            Books = new List<Book>();
+            Readers = new List<Reader>();
+            Logs = new List<Log>();
+        }
     }
 }

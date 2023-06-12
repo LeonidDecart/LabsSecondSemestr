@@ -1,0 +1,8 @@
+{
+  "Id": "uint",
+  "Name": "string",
+  "Author": "string",
+  "PublicationYear": "int",
+  "ShelfNumber": "uint",
+  "ShelfPlaceNumber": "uint"
+}
