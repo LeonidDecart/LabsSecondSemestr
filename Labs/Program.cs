@@ -3,50 +3,98 @@ using LabAllowance;
 
 class Program
 {
+    public static Database Database;
     static void Main()
     {
-        Database database = new Database();
+        Database = new Database();
+        InitializeDatabase();
+    }
 
+    public static void InitializeDatabase()
+    {
+        InitializeReaders();
+        InitializeBooks();
+        InitializeLogs();
+    }
+    public static void InitializeReaders()
+    {
         string[] readerStrings = File.ReadAllLines("../../../../Data/Readers.csv");
-        foreach (string readerString in readerStrings)
+        for (int i=0; i<readerStrings.Length; i++)
         {
+            string readerString = readerStrings[i];
             string[] readerStringSplitted = readerString.Split(";");
-            database.Readers.Add(new Reader() 
-                { 
-                    Id = uint.Parse(readerStringSplitted[0]), 
-                    Name = readerStringSplitted[1]
-                }
+            if (readerStringSplitted.Length != Reader.FieldCount)
+                throw new Exception("File Readers.csv | Invalid count of fields | Line - "+(i+1).ToString());
+            if (!uint.TryParse(readerStringSplitted[0], out uint readerId))
+                throw new Exception("File Readers.csv | Invalid readerId format | Line - " + (i + 1).ToString());
+            Database.Readers.Add(new Reader()
+            {
+                Id = readerId,
+                Name = readerStringSplitted[1]
+            }
             );
         }
+    }
 
+    public static void InitializeBooks()
+    {
         string[] bookStrings = File.ReadAllLines("../../../../Data/Books.csv");
-        foreach (string bookString in bookStrings)
+        for (int i = 0; i<bookStrings.Length; i++)
         {
+            string bookString = bookStrings[i];
             string[] bookStringSplitted = bookString.Split(";");
-            database.Books.Add(new Book() 
-                { 
-                    Id = uint.Parse(bookStringSplitted[0]), 
-                    Name = bookStringSplitted[1],  
-                    Author = bookStringSplitted[2],
-                    PublicationYear = int.Parse(bookStringSplitted[3]),
-                    ShelfNumber = uint.Parse(bookStringSplitted[4]), 
-                    ShelfPlaceNumber = uint.Parse(bookStringSplitted[5])
-                }
+            if (bookStringSplitted.Length != Book.FieldCount)
+                throw new Exception("File Books.csv | Invalid count of fields | Line - " + (i + 1).ToString());
+            if (!uint.TryParse(bookStringSplitted[0], out uint bookId))
+                throw new Exception("File Books.csv | Invalid bookId format | Line - " + (i + 1).ToString());
+            if (!int.TryParse(bookStringSplitted[3], out int bookPublicationYear))
+                throw new Exception("File Books.csv | Invalid bookPublicationYear format | Line - " + (i + 1).ToString());
+            if (!uint.TryParse(bookStringSplitted[4], out uint bookShelfNumber))
+                throw new Exception("File Books.csv | Invalid bookShelfNumber format | Line - " + (i + 1).ToString());
+            if (!uint.TryParse(bookStringSplitted[5], out uint bookShelfPlaceNumber))
+                throw new Exception("File Books.csv | Invalid bookShelfPlaceNumber format | Line - " + (i + 1).ToString());
+            Database.Books.Add(new Book()
+            {
+                Id = bookId,
+                Name = bookStringSplitted[1],
+                Author = bookStringSplitted[2],
+                PublicationYear = bookPublicationYear,
+                ShelfNumber = bookShelfNumber,
+                ShelfPlaceNumber = bookShelfPlaceNumber
+            }
             );
         }
+    }
 
+    public static void InitializeLogs()
+    {
         string[] logStrings = File.ReadAllLines("../../../../Data/Logs.csv");
-        foreach (string logString in logStrings)
+        for (int i= 0;i < logStrings.Length;i++)
         {
+            string logString = logStrings[i];
             string[] logStringSplitted = logString.Split(";");
-            database.Logs.Add(new Log()
-                {
-                    Id = uint.Parse(logStringSplitted[0]),
-                    Reader = database.Readers.Find(reader => reader.Id == uint.Parse(logStringSplitted[1])),
-                    Book = database.Books.Find(book => book.Id == uint.Parse(logStringSplitted[2])),
-                    TakeDate = DateTime.Parse(logStringSplitted[3]),
-                    ReturnDate = DateTime.Parse(logStringSplitted[4])
-                }
+
+            if (logStringSplitted.Length != Log.FieldCount)
+                throw new Exception("File Logs.csv | Invalid count of fields | Line - " + (i + 1).ToString());
+            if (!uint.TryParse(logStringSplitted[0], out uint logId))
+                throw new Exception("File Logs.csv | Invalid logId format | Line - " + (i + 1).ToString());
+            if (!uint.TryParse(logStringSplitted[1], out uint readerId))
+                throw new Exception("File Logs.csv | Invalid readerId format | Line - " + (i + 1).ToString());
+            if (!uint.TryParse(logStringSplitted[2], out uint bookId))
+                throw new Exception("File Logs.csv | Invalid bookId format | Line - " + (i + 1).ToString());
+            if (!DateTime.TryParse(logStringSplitted[3], out DateTime logTakeDate))
+                throw new Exception("File Logs.csv | Invalid logTakeDate format | Line - " + (i + 1).ToString());
+            if (!DateTime.TryParse(logStringSplitted[4], out DateTime logReturnDate))
+                throw new Exception("File Logs.csv | Invalid logReturnDate format | Line - " + (i + 1).ToString());
+
+            Database.Logs.Add(new Log()
+            {
+                Id = logId,
+                Reader = Database.Readers.Find(reader => reader.Id == readerId) ?? throw new Exception("File Logs.csv | readerId is not Exist | Line - " + (i + 1).ToString()),
+                Book = Database.Books.Find(book => book.Id == bookId) ?? throw new Exception("File Logs.csv | bookId is not Exist | Line - " + (i + 1).ToString()),
+                TakeDate = logTakeDate,
+                ReturnDate = logReturnDate
+            }
             );
         }
     }

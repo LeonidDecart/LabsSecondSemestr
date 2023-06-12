@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using static System.Reflection.Metadata.BlobBuilder;
-
-namespace LabAllowance
+﻿namespace LabAllowance
 {
     class Database
     {

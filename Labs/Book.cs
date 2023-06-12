@@ -2,6 +2,7 @@
 {
     public class Book
     {
+        public static int FieldCount = 6;
         public uint Id { get; set; } 
         public string Name { get; set; }
         public string Author { get; set; }
