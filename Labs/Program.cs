@@ -46,7 +46,9 @@ class Program
         {
             string readerString = readerStrings[i];
             string[] readerStringSplitted = readerString.Split(";");
-            if (readerStringSplitted.Length != Reader.FieldCount)
+            Type type = typeof(Reader);
+            int NumberOfRecords = type.GetProperties().Length;
+            if (readerStringSplitted.Length != NumberOfRecords)
                 throw new Exception("File Readers.csv | Invalid count of fields | Line - "+(i+1).ToString());
             if (!uint.TryParse(readerStringSplitted[0], out uint readerId))
                 throw new Exception("File Readers.csv | Invalid readerId format | Line - " + (i + 1).ToString());
@@ -66,7 +68,10 @@ class Program
         {
             string bookString = bookStrings[i];
             string[] bookStringSplitted = bookString.Split(";");
-            if (bookStringSplitted.Length != Book.FieldCount)
+
+            Type type = typeof(Book);
+            int NumberOfRecords = type.GetProperties().Length;
+            if (bookStringSplitted.Length != NumberOfRecords)
                 throw new Exception("File Books.csv | Invalid count of fields | Line - " + (i + 1).ToString());
             if (!uint.TryParse(bookStringSplitted[0], out uint bookId))
                 throw new Exception("File Books.csv | Invalid bookId format | Line - " + (i + 1).ToString());
@@ -97,7 +102,9 @@ class Program
             string logString = logStrings[i];
             string[] logStringSplitted = logString.Split(";");
 
-            if (logStringSplitted.Length != Log.FieldCount)
+            Type type = typeof(Log);
+            int NumberOfRecords = type.GetProperties().Length;
+            if (logStringSplitted.Length != NumberOfRecords)
                 throw new Exception("File Logs.csv | Invalid count of fields | Line - " + (i + 1).ToString());
             if (!uint.TryParse(logStringSplitted[0], out uint logId))
                 throw new Exception("File Logs.csv | Invalid logId format | Line - " + (i + 1).ToString());
